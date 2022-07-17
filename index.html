@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <title>ThreeTris Bernd sein simples Web-Tetris</title>
+    
+
+	</head>
+	<body>
+        <!-- https://threejs.org/docs/index.html#manual/en/introduction/Installation -->
+        <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+        <script type="importmap">
+          {
+            "imports": {
+              "three": "https://unpkg.com/three@0.142.0/build/three.module.js",
+              "OrbitControls": "https://unpkg.com/three@0.142.0/examples/jsm/controls/OrbitControls.js"
+            }
+          }
+        </script>
+        
+        <script type="module">
+          import { App } from './script.js';
+            let app = null;
+
+            document.addEventListener("DOMContentLoaded", function(){
+                app = new App();
+                window.app = app;
+            });
+        </script>    
+	</body>
+</html>
